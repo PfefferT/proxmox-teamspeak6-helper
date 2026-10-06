@@ -7,11 +7,10 @@ Creates a Debian 13 LXC container and installs the latest official TeamSpeak 6 S
 Run the following on the Proxmox host:
 
 ```bash
-COMMUNITY_SCRIPTS_URL="https://raw.githubusercontent.com/PfefferT/proxmox-teamspeak6-helper/main" \
-  bash -c "$(curl -fsSL https://raw.githubusercontent.com/PfefferT/proxmox-teamspeak6-helper/main/ct/teamspeak6-server.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/PfefferT/proxmox-teamspeak6-helper/main/ct/teamspeak6-server.sh)"
 ```
 
-`COMMUNITY_SCRIPTS_URL` lets the Community Scripts core fetch the matching installer from this repository.
+The script sets `COMMUNITY_SCRIPTS_URL` to this repository before loading the Community Scripts core, so the core fetches the matching installer here. If you use a fork, set `COMMUNITY_SCRIPTS_URL` to your fork's raw base URL before running the script.
 
 ## Network ports
 
